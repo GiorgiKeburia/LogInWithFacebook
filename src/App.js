@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
+import Facebook from './components/Facebook'
+
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +20,7 @@ function App() {
         >
           Learn React
         </a>
+        <Facebook/>
       </header>
     </div>
   );
