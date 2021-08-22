@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-import Facebook from './components/Facebook'
+// import Facebook from './components/Facebook'
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         >
           Learn React
         </a>
-        <Facebook/>
+        {/* <Facebook/> */}
       </header>
     </div>
   );

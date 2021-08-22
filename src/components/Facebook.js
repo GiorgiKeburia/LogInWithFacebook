@@ -12,14 +12,36 @@ export default class facebook extends Component {
 
   responseFacebook = (response) => {
     console.log(response);
+
+    this.setState({
+      isLoggedIn: true,
+      userID: response.userID,
+      name: response.name,
+      email: response.email,
+      picture: response.picture.data.url,
+    });
   };
 
   componentClicked = () => console.log("clicked");
-
+  logOut = () => console.log("Loged Out");
   render() {
     let fbContant;
     if (this.state.isLoggedIn) {
-      fbContant=null
+      fbContant = (
+        <div
+          style={{
+            width: "400px",
+            margin: "auto",
+            background: "grey",
+            padding: "20px",
+          }}
+        >
+          <img src={this.state.picture} alt={this.state.name} />
+          <h2>Welcome {this.state.name}</h2>
+          Email: {this.state.email}
+          <button>log out</button>
+        </div>
+      );
     } else {
       fbContant = (
         <FacebookLogin
